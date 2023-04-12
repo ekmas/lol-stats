@@ -11,7 +11,7 @@ export default function Header() {
   const scrollPosition = useScrollPosition()
 
   return (
-    <header className="fixed w-full top-0 left-0 dark:bg-gray bg-white">
+    <header className="fixed w-full top-0 left-0 dark:bg-gray bg-white-gray">
         <nav className={scrollPosition > 0 ? 'shadow transition-shadow shadow-[#1d1d1d48] dark:shadow-[#ffffff]' : 'shadow-none'}>
             <div className='max-w-[1300px] py-7 flex justify-between items-center w-auto mx-auto'>
               <Link to={'/'}>
@@ -19,7 +19,7 @@ export default function Header() {
               </Link>
 
               <div className='w-[520px] transition ease-linear duration-100 flex group justify-between items-center'>
-                  <div className='navlinks w-[450px] hover:text-[#1d1d1d80] dark:hover:text-[#FFFFFF80] flex text-black dark:text-white justify-between items-center'>
+                  <div className='navlinks w-[450px] hover:text-[#1d1d1d80] dark:hover:text-[#ededed80] flex text-black dark:text-white justify-between items-center'>
                     <Link className='transition ease-in-out hover:text-black dark:hover:text-white' to={'/'}>Home</Link>
                     <Link className='transition ease-in-out hover:text-black dark:hover:text-white' to={'/leaderboard'}>Leaderboard</Link>
                     <Link className='transition ease-in-out hover:text-black dark:hover:text-white' to={'/free-rotation'}>Free rotation</Link>

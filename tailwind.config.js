@@ -9,7 +9,9 @@ export default {
     extend: {
       colors: {
         'gray': '#1d1d1d',
+        'white-gray': '#e2e2e2',
         'black': '#121212',
+        'white': '#ededed',
         'blue': '#2951AC',
         'light-blue': '#3668DD'
       }
