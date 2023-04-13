@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdExpandMore, MdSearch } from 'react-icons/md'
+import RegionModal from './RegionModal'
 
 export default function SummonerForm() {
+
+  const [isModalActive, setIsModalActive] = useState(false)
+  const [region, setRegion] = useState(null)
+
   return (
     <>
       <div className='flex items-center my-10'>
@@ -13,13 +18,19 @@ export default function SummonerForm() {
           </form>
         </div>
 
-        <button className='bg-white flex items-center dark:bg-black py-[14px] px-5 rounded-e-2xl'>
+        <button onClick={() => setIsModalActive(true)} className='bg-white flex items-center dark:bg-black py-[14px] px-5 rounded-e-2xl'>
           Region
           <MdExpandMore className='ml-3 w-6 h-6'/>
         </button>
       </div>
 
       <button className='bg-light-blue hover:bg-blue transition text-white rounded-lg px-7 py-2'>Submit</button>
+
+      <RegionModal 
+        isModalActive={isModalActive}
+        setIsModalActive={setIsModalActive}
+        setRegion={setRegion}
+      />
     </>
   )
 }
