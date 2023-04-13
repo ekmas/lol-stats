@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
-import Home from "./pages/Home"
 import { ThemeContext } from "./contexts/ThemeContext";
+import Home from "./pages/Home"
+import Summoner from "./pages/Summoner";
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -27,6 +28,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/summoner/:region/:username" element={<Summoner />}/>
       </Routes>
     </ThemeContext.Provider>
   )

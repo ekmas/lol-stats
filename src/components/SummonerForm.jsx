@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { MdExpandMore, MdSearch } from 'react-icons/md'
 import RegionModal from './RegionModal'
 import ErrorModal from './ErrorModal'
+import { useNavigate } from 'react-router-dom'
 
 export default function SummonerForm() {
+  const navigate = useNavigate()
 
   const [isModalActive, setIsModalActive] = useState(false)
   const [username, setUsername] = useState('')
@@ -14,7 +16,7 @@ export default function SummonerForm() {
     e.preventDefault()
 
     if(username.trim() !== '' && region !== null){
-
+      navigate(`/summoner/${region}/${username}`)
     }else{
       if(username.trim() === '' && region === null){
         setErrorMessage('Please enter a username and select a region.')
