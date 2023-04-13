@@ -43,7 +43,7 @@ export default function RegionModal({ isModalActive, setIsModalActive, setRegion
               <div className='p-6 grid gap-5 max-h-[410px] overflow-y-auto'>
                 {regionsArray.map(region => {
                   return(
-                    <button onClick={() => {selectRegionButton(region)}} key={region} className='w-full py-2 border rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black'>{region}</button>
+                    <button onClick={() => {selectRegionButton(region.toLowerCase())}} key={region} className='w-full py-2 border rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black'>{region}</button>
                   )
                 })}
               </div>
