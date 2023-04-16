@@ -23,3 +23,22 @@ export const routingValues = {
     vn: 'vn2',
     oce: 'oc1'
 }
+
+export const generalRegion = {
+    eune: "europe",
+    euw: "europe",
+    ru: "europe",
+    tr: "europe",
+    na: 'americas',
+    las: 'americas',
+    lan: 'americas',
+    br: 'americas',
+    kr: 'asia',
+    jp: 'asia',
+    ph: 'sea',
+    sg: 'sea',
+    tw: 'sea',
+    th: 'sea',
+    vn: 'sea',
+    oce: 'sea',
+}
