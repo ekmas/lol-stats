@@ -11,7 +11,7 @@ export default function Header() {
   const scrollPosition = useScrollPosition()
 
   return (
-    <header className="fixed w-full top-0 left-0 dark:bg-gray bg-white-gray">
+    <header className="fixed w-full top-0 left-0 dark:bg-gray bg-white-gray z-10">
         <nav className={scrollPosition > 0 ? 'shadow transition-shadow shadow-[#1d1d1d48] dark:shadow-[#ffffff]' : 'shadow-none'}>
             <div className='max-w-[1300px] py-7 flex justify-between items-center w-auto mx-auto'>
               <Link to={'/'}>
