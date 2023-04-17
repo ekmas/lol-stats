@@ -16,3 +16,37 @@ body{
   height: 100vh;
   height: 100svh;
 }
+
+html.dark .placeholder{
+  background-image: linear-gradient(
+      to right,
+      #121212 0%,
+      #2b2b2b 20%,
+      #121212 40%,
+      #121212 100%
+  ) !important;
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
+html .placeholder{
+  background-image: linear-gradient(
+      to right,
+      #cacaca 0%,
+      #a3a3a3 20%,
+      #cacaca 40%,
+      #cacaca 100%
+  ) !important;
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
+@keyframes bgPos {
+  0% {
+      background-position: 50% 0;
+  }
+
+  100% {
+      background-position: -150% 0;
+  }
+}
