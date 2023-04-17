@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { MdExpandMore, MdSearch } from 'react-icons/md'
 import RegionModal from './RegionModal'
-import ErrorModal from './ErrorModal'
+import Modal from './Modal'
 import { useNavigate } from 'react-router-dom'
 
 export default function SummonerForm() {
@@ -10,7 +10,7 @@ export default function SummonerForm() {
   const [isModalActive, setIsModalActive] = useState(false)
   const [username, setUsername] = useState('')
   const [region, setRegion] = useState(null)
-  const [errorMessage, setErrorMessage] = useState('')
+  const [message, setMessage] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -19,11 +19,11 @@ export default function SummonerForm() {
       navigate(`/summoner/${region}/${username}`)
     }else{
       if(username.trim() === '' && region === null){
-        setErrorMessage('Please enter a username and select a region.')
+        setMessage('Please enter a username and select a region.')
       }else if(username.trim() === ''){
-        setErrorMessage('Please enter a username.')
+        setMessage('Please enter a username.')
       }else if(region === null){
-        setErrorMessage('Please select a region.')
+        setMessage('Please select a region.')
       }
     }
   }
@@ -53,9 +53,9 @@ export default function SummonerForm() {
         setRegion={setRegion}
       />
 
-      <ErrorModal 
-        errorMessage={errorMessage}
-        setErrorMessage={setErrorMessage}
+      <Modal 
+        message={message}
+        setMessage={setMessage}
       />
     </>
   )
