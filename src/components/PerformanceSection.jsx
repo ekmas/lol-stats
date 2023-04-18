@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import useSummonerStore from '../stores/summonerStore'
+import ChampionStats from './ChampionStats'
 
 export default function PerformanceSection() {
 
   const matches = useSummonerStore((state) => state.matches)
   const username = useSummonerStore((state) => state.username)
+  const ready = useSummonerStore((state) => state.ready)
 
   const [playedChampions, setPlayedChampions] = useState([])
 
   useEffect(() => {
-    console.log(matches)
     gatherPlayedChampions()
+    console.log(matches)
   }, [matches])
 
   /**
@@ -31,9 +33,6 @@ export default function PerformanceSection() {
    * In case object with current championId exists we are not adding a new object but instead adding a win or lose
    * to wl array and kda value to kda array.
    * Later in playedChampions we are mapping over tempPlayedChampions to calculate wins, losses and kda
-   * 
-   * @var tempPlayedChampions
-   * @var playedChampions
   */
   const gatherPlayedChampions = () => {
     let tempPlayedChampions = []
@@ -42,6 +41,8 @@ export default function PerformanceSection() {
         let participantsArray = matches[i].info.participants
         let summonerObject = participantsArray.find(element => element.summonerName === username);
         let playerObj = tempPlayedChampions.find(element => element.championId === summonerObject.championId)
+
+        console.log(summonerObject)
 
         if(playerObj !== undefined){
             playerObj.kda.push(calculateKda(summonerObject.kills, summonerObject.deaths, summonerObject.assists))
@@ -67,15 +68,35 @@ export default function PerformanceSection() {
     })
 
     let slicedPlayedChampions = playedChampions.slice(0, 5)
+
+    setPlayedChampions(slicedPlayedChampions)
+
+    console.log(slicedPlayedChampions)
   }
 
   return (
-    <div className='w-full bg-white dark:bg-black px-4 py-3 rounded-lg'>
-        <div>
-            <h2 className='text-black dark:text-white text-lg font-bold'>Performance</h2>
+    <>
+        {ready ?
+            <div className='w-full bg-white dark:bg-black px-4 py-3 rounded-lg'>
+                <div>
+                    <div className='flex items-center justify-between'>
+                        <h2 className='text-black dark:text-white text-lg font-bold'>Recent Performance</h2>
 
-            
-        </div>
-    </div>
+                        {matches.length === 0 && <p className='text-black dark:text-white'>N/A</p>}
+                    </div>
+
+                    {matches.length !== 0 &&
+                        <div className='mt-3'>
+                        {playedChampions.map(item => {
+                                return(
+                                    <ChampionStats key={item.championId} stats={item}/>
+                                )
+                            })}
+                        </div>
+                    }
+                </div>
+            </div>
+        : <div className='placeholder h-[52px] rounded-lg'></div>}
+    </>
   )
 }
