@@ -11,7 +11,7 @@ export default function Match({ match }) {
   let remake = !seconds ? match.info.gameDuration < 211000 : match.info.gameDuration < 211;
 
   return (
-    <div style={{ borderColor: remake ? '#9090a2' : won ? '#5382e8' : '#E84057', backgroundColor: remake ? '#515161' : won ? '#28344e' : '#59343b' }} className='p-5 flex rounded my-3 border-l-4'>
+    <div className={remake ? 'remake' : won ? 'win' : 'loss'}>
         <MatchMetadata 
             remake={remake}
             won={won}

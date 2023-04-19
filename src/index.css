@@ -41,6 +41,18 @@ html .placeholder{
   animation: bgPos 1s linear infinite;
 }
 
+.win{
+  @apply border-[#5382e8] bg-[#ecf2ff] dark:bg-[#28344e] p-5 flex rounded my-3 border-l-4
+}
+
+.loss{
+  @apply border-[#E84057] bg-[#fff0f3] dark:bg-[#59343b] p-5 flex rounded my-3 border-l-4
+}
+
+.remake{
+  @apply border-[#9090a2] bg-[#f7f7f9] dark:bg-[#515161] p-5 flex rounded my-3 border-l-4
+}
+
 @keyframes bgPos {
   0% {
       background-position: 50% 0;
