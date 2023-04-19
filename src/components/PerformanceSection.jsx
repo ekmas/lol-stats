@@ -12,7 +12,6 @@ export default function PerformanceSection() {
 
   useEffect(() => {
     gatherPlayedChampions()
-    console.log(matches)
   }, [matches])
 
   /**
@@ -42,8 +41,6 @@ export default function PerformanceSection() {
         let summonerObject = participantsArray.find(element => element.summonerName === username);
         let playerObj = tempPlayedChampions.find(element => element.championId === summonerObject.championId)
 
-        console.log(summonerObject)
-
         if(playerObj !== undefined){
             playerObj.kda.push(calculateKda(summonerObject.kills, summonerObject.deaths, summonerObject.assists))
             playerObj.wl.push(summonerObject.win)
@@ -70,14 +67,12 @@ export default function PerformanceSection() {
     let slicedPlayedChampions = playedChampions.slice(0, 5)
 
     setPlayedChampions(slicedPlayedChampions)
-
-    console.log(slicedPlayedChampions)
   }
 
   return (
     <>
         {ready ?
-            <div className='w-full bg-white dark:bg-black px-4 py-3 rounded-lg'>
+            <div className='w-full bg-white dark:bg-black px-4 py-3 mb-5 rounded-lg'>
                 <div>
                     <div className='flex items-center justify-between'>
                         <h2 className='text-black dark:text-white text-lg font-bold'>Recent Performance</h2>
@@ -86,8 +81,8 @@ export default function PerformanceSection() {
                     </div>
 
                     {matches.length !== 0 &&
-                        <div className='mt-3'>
-                        {playedChampions.map(item => {
+                        <div className='mt-5'>
+                            {playedChampions.map(item => {
                                 return(
                                     <ChampionStats key={item.championId} stats={item}/>
                                 )
@@ -96,7 +91,7 @@ export default function PerformanceSection() {
                     }
                 </div>
             </div>
-        : <div className='placeholder h-[52px] rounded-lg'></div>}
+        : <div className='placeholder h-[52px] mb-5 rounded-lg'></div>}
     </>
   )
 }

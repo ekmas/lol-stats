@@ -17,7 +17,7 @@ export default function SummonerHeader() {
   return (
     <div className='pt-[145px] pb-[60px] bg-white-gray dark:bg-gray text-black dark:text-white flex flex-col items-center'>
         {ready ?
-          <div className="w-[150px] h-[150px] relative bg-center bg-cover" style={{ backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/12.23.1/img/profileicon/${summonerInfo.pfp}.png)` }}>
+          <div className="w-[150px] h-[150px] relative bg-center bg-cover" style={{ backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/13.8.1/img/profileicon/${summonerInfo.pfp}.png)` }}>
             <div className="absolute bottom-[-10px] w-full flex justify-center">
                 <p className='dark:bg-white dark:text-black bg-black text-white px-2.5 py-0.5 rounded-lg'>{summonerInfo.level}</p>
             </div>

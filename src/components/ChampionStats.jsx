@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { champions, championsLink } from '../data'
 
 export default function ChampionStats({ stats }) {
@@ -6,7 +6,7 @@ export default function ChampionStats({ stats }) {
   let winrate = (((stats.wins / (stats.wins + stats.losses)) * 100).toFixed(0))
   
   return (
-    <div className='py-2 flex justify-between'>
+    <div className='my-3 flex justify-between'>
         <div className='flex items-center'>
             <div className='w-10 h-10 mr-3 bg-center bg-cover' style={{ backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/12.23.1/img/champion/${championsLink[stats.championId]}.png')`}}></div>
 
