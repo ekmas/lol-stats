@@ -372,3 +372,318 @@ export const championsLink = {
     '142': 'Zoe',
     '143': 'Zyra'
 }
+
+export const queueIdArray = [
+    {
+        "queueId": 0,
+        "map": "Custom games",
+        "description": null,
+        "notes": null
+    },
+    {
+        "queueId": 72,
+        "map": "Howling Abyss",
+        "description": "1v1 ARAM",
+        "notes": null
+    },
+    {
+        "queueId": 73,
+        "map": "Howling Abyss",
+        "description": "2v2 ARAM",
+        "notes": null
+    },
+    {
+        "queueId": 75,
+        "map": "Summoner's Rift",
+        "description": "6v6 Hexakill games",
+        "notes": null
+    },
+    {
+        "queueId": 76,
+        "map": "Summoner's Rift",
+        "description": "URF",
+        "notes": null
+    },
+    {
+        "queueId": 78,
+        "map": "Howling Abyss",
+        "description": "One For All",
+        "notes": null
+    },
+    {
+        "queueId": 83,
+        "map": "Summoner's Rift",
+        "description": "Co-op vs URF",
+        "notes": null
+    },
+    {
+        "queueId": 100,
+        "map": "Butcher's Bridge",
+        "description": "ARAM",
+        "notes": null
+    },
+    {
+        "queueId": 310,
+        "map": "Summoner's Rift",
+        "description": "Nemesis",
+        "notes": null
+    },
+    {
+        "queueId": 313,
+        "map": "Summoner's Rift",
+        "description": "Black Market Brawlers games",
+        "notes": null
+    },
+    {
+        "queueId": 317,
+        "map": "Crystal Scar",
+        "description": "Definitely Not Dominion games",
+        "notes": null
+    },
+    {
+        "queueId": 325,
+        "map": "Summoner's Rift",
+        "description": "All Random",
+        "notes": null
+    },
+    {
+        "queueId": 400,
+        "map": "Summoner's Rift",
+        "description": "Normal Draft",
+        "notes": null
+    },
+    {
+        "queueId": 420,
+        "map": "Summoner's Rift",
+        "description": "Ranked Solo",
+        "notes": null
+    },
+    {
+        "queueId": 430,
+        "map": "Summoner's Rift",
+        "description": "Normal blind",
+        "notes": null
+    },
+    {
+        "queueId": 440,
+        "map": "Summoner's Rift",
+        "description": "Ranked Flex",
+        "notes": null
+    },
+    {
+        "queueId": 450,
+        "map": "Howling Abyss",
+        "description": "ARAM",
+        "notes": null
+    },
+    {
+        "queueId": 460,
+        "map": "Twisted Treeline",
+        "description": "3v3 Blind",
+        "notes": "Deprecated in patch 9.23"
+    },
+    {
+        "queueId": 470,
+        "map": "Twisted Treeline",
+        "description": "3v3 Ranked Flex",
+        "notes": "Deprecated in patch 9.23"
+    },
+    {
+        "queueId": 600,
+        "map": "Summoner's Rift",
+        "description": "Blood Hunt Assassin games",
+        "notes": null
+    },
+    {
+        "queueId": 610,
+        "map": "Cosmic Ruins",
+        "description": "Dark Star: Singularity games",
+        "notes": null
+    },
+    {
+        "queueId": 700,
+        "map": "Summoner's Rift",
+        "description": "Clash",
+        "notes": null
+    },
+    {
+        "queueId": 820,
+        "map": "Twisted Treeline",
+        "description": "Co-op Beginner",
+        "notes": null
+    },
+    {
+        "queueId": 830,
+        "map": "Summoner's Rift",
+        "description": "Co-op Intro",
+        "notes": null
+    },
+    {
+        "queueId": 840,
+        "map": "Summoner's Rift",
+        "description": "Co-op Beginner",
+        "notes": null
+    },
+    {
+        "queueId": 850,
+        "map": "Summoner's Rift",
+        "description": "Co-op Intermediate",
+        "notes": null
+    },
+    {
+        "queueId": 900,
+        "map": "Summoner's Rift",
+        "description": "ARURF",
+        "notes": null
+    },
+    {
+        "queueId": 910,
+        "map": "Crystal Scar",
+        "description": "Ascension",
+        "notes": null
+    },
+    {
+        "queueId": 920,
+        "map": "Howling Abyss",
+        "description": "Legend of the Poro King",
+        "notes": null
+    },
+    {
+        "queueId": 940,
+        "map": "Summoner's Rift",
+        "description": "Nexus Siege",
+        "notes": null
+    },
+    {
+        "queueId": 950,
+        "map": "Summoner's Rift",
+        "description": "Doom Bots Voting",
+        "notes": null
+    },
+    {
+        "queueId": 960,
+        "map": "Summoner's Rift",
+        "description": "Doom Bots Standard",
+        "notes": null
+    },
+    {
+        "queueId": 980,
+        "map": "Valoran City Park",
+        "description": "Star Guardian Invasion: Normal games",
+        "notes": null
+    },
+    {
+        "queueId": 990,
+        "map": "Valoran City Park",
+        "description": "Star Guardian Invasion: Onslaught games",
+        "notes": null
+    },
+    {
+        "queueId": 1000,
+        "map": "Overcharge",
+        "description": "PROJECT: Hunters",
+        "notes": null
+    },
+    {
+        "queueId": 1010,
+        "map": "Summoner's Rift",
+        "description": "Snow ARURF",
+        "notes": null
+    },
+    {
+        "queueId": 1020,
+        "map": "Summoner's Rift",
+        "description": "One for All",
+        "notes": null
+    },
+    {
+        "queueId": 1030,
+        "map": "Crash Site",
+        "description": "Odyssey Extraction: Intro games",
+        "notes": null
+    },
+    {
+        "queueId": 1040,
+        "map": "Crash Site",
+        "description": "Odyssey Extraction: Cadet games",
+        "notes": null
+    },
+    {
+        "queueId": 1050,
+        "map": "Crash Site",
+        "description": "Odyssey Extraction: Crewmember games",
+        "notes": null
+    },
+    {
+        "queueId": 1060,
+        "map": "Crash Site",
+        "description": "Odyssey Extraction: Captain games",
+        "notes": null
+    },
+    {
+        "queueId": 1070,
+        "map": "Crash Site",
+        "description": "Odyssey Extraction: Onslaught games",
+        "notes": null
+    },
+    {
+        "queueId": 1090,
+        "map": "Convergence",
+        "description": "TFT",
+        "notes": null
+    },
+    {
+        "queueId": 1100,
+        "map": "Convergence",
+        "description": "Ranked TFT",
+        "notes": null
+    },
+    {
+        "queueId": 1110,
+        "map": "Convergence",
+        "description": "TFT Tutorial",
+        "notes": null
+    },
+    {
+        "queueId": 1111,
+        "map": "Convergence",
+        "description": "TFT Test",
+        "notes": null
+    },
+    {
+        "queueId": 1300,
+        "map": "Nexus Blitz",
+        "description": "Nexus Blitz",
+        "notes": null
+    },
+    {
+        "queueId": 1400,
+        "map": "Summoner's Rift",
+        "description": "Ultimate Spellbook",
+        "notes": null
+    },
+    {
+        "queueId": 1900,
+        "map": "Summoner's Rift",
+        "description": "URF",
+        "notes": null
+    },
+    {
+        "queueId": 2000,
+        "map": "Summoner's Rift",
+        "description": "Tutorial 1",
+        "notes": null
+    },
+    {
+        "queueId": 2010,
+        "map": "Summoner's Rift",
+        "description": "Tutorial 2",
+        "notes": null
+    },
+    {
+        "queueId": 2020,
+        "map": "Summoner's Rift",
+        "description": "Tutorial 3",
+        "notes": null
+    }
+]
