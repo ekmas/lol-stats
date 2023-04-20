@@ -687,3 +687,52 @@ export const queueIdArray = [
         "notes": null
     }
 ]
+
+export const summonerSpell = {
+    '21': 'SummonerBarrier.png',
+    '1': 'SummonerBoost.png',
+    '14': 'SummonerDot.png',
+    '3': 'SummonerExhaust.png',
+    '4': 'SummonerFlash.png',
+    '6': 'SummonerHaste.png',
+    '7': 'SummonerHeal.png',
+    '13': 'SummonerMana.png',
+    '30': 'SummonerPoroRecall.png',
+    '31': 'SummonerPoroThrow.png',
+    '11': 'SummonerSmite.png ',
+    '39': 'SummonerSnowball.png',
+    '32': 'SummonerSnowURFSnowball_Mark.png',
+    '12': 'SummonerTeleport.png ',
+    '54': 'Summoner_UltBookPlaceholder.png',
+    '55': 'Summoner_UltBookSmitePlaceholder.png',
+}
+
+export const runes = {
+    '8100': 'Styles/7200_Domination.png',
+    '8300': 'Styles/7203_Whimsy.png',
+    '8000': 'Styles/7201_Precision.png',
+    '8400': 'Styles/7204_Resolve.png',
+    '8200': 'Styles/7202_Sorcery.png',
+
+    '8112': 'Styles/Domination/Electrocute/Electrocute.png',
+    '8124': 'Styles/Domination/Predator/Predator.png',
+    '8128': 'Styles/Domination/DarkHarvest/DarkHarvest.png',
+    '9923': 'Styles/Domination/HailOfBlades/HailOfBlades.png',
+    
+    '8351': 'Styles/Inspiration/GlacialAugment/GlacialAugment.png',
+    '8360': 'Styles/Inspiration/UnsealedSpellbook/UnsealedSpellbook.png',
+    '8369': 'Styles/Inspiration/FirstStrike/FirstStrike.png',
+    
+    '8005': 'Styles/Precision/PressTheAttack/PressTheAttack.png',
+    '8008': 'Styles/Precision/LethalTempo/LethalTempoTemp.png',
+    '8021': 'Styles/Precision/FleetFootwork/FleetFootwork.png',
+    '8010': 'Styles/Precision/Conqueror/Conqueror.png',
+    
+    '8437': 'Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png',
+    '8439': 'Styles/Resolve/VeteranAftershock/VeteranAftershock.png',
+    '8465': 'Styles/Resolve/Guardian/Guardian.png',
+    
+    '8214': 'Styles/Sorcery/SummonAery/SummonAery.png',
+    '8229': 'Styles/Sorcery/ArcaneComet/ArcaneComet.png',
+    '8230': 'Styles/Sorcery/PhaseRush/PhaseRush.png',
+}
