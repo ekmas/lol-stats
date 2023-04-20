@@ -9,11 +9,11 @@ import SummonerMain from '../components/SummonerMain'
 export default function Summoner() {
   let { username, region } = useParams()
 
-  const resetReady = useSummonerStore((state) => state.resetReady)
+  const reset = useSummonerStore((state) => state.reset)
   const fetch = useSummonerStore((state) => state.fetch)
 
   useEffect(() => {
-    resetReady();
+    reset();
     fetch(username, region)
   }, [])
 
