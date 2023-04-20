@@ -101,7 +101,7 @@ let handleGameSeconds = (gameDuration, seconds) => {
 }
 
   return (
-    <div className="flex flex-col items-center text-white text-sm w-[100px]">
+    <div className="flex flex-col items-center text-black dark:text-white text-sm w-[100px]">
         <h4 className='font-medium'>{getGameMode(match.info.queueId)}</h4>
         <p className='text-xs mt-[4px] mb-[6px]'>{handleWhenWasPlayed(gameDate)}</p>
         <div className="flex items-center">
