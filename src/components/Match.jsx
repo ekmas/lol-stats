@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import useSummonerStore from '../stores/summonerStore'
 import MatchMetadata from './MatchMetadata'
+import ChampionRunes from './ChampionRunes'
 
 export default function Match({ match }) {
 
@@ -17,6 +18,12 @@ export default function Match({ match }) {
             won={won}
             match={match}
         />
+        <ChampionRunes
+          match={match}
+        />
+        <p>s</p>
+        <p>s</p>
+        <p>s</p>
     </div>
   )
 }
