@@ -53,6 +53,10 @@ html .placeholder{
   @apply border-[#9090a2] bg-[#f7f7f9] dark:bg-[#515161] p-5 flex rounded my-3 border-l-4 items-center justify-between
 }
 
+.item{
+  @apply w-[27px] h-[27px]
+}
+
 @keyframes bgPos {
   0% {
       background-position: 50% 0;
