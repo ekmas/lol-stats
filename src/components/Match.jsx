@@ -2,6 +2,7 @@ import React from 'react'
 import useSummonerStore from '../stores/summonerStore'
 import MatchMetadata from './MatchMetadata'
 import ChampionRunes from './ChampionRunes'
+import SummonerStats from './SummonerStats'
 
 export default function Match({ match }) {
 
@@ -14,16 +15,18 @@ export default function Match({ match }) {
   return (
     <div className={remake ? 'remake' : won ? 'win' : 'loss'}>
         <MatchMetadata 
-            remake={remake}
-            won={won}
-            match={match}
+          remake={remake}
+          won={won}
+          match={match}
         />
         <ChampionRunes
           match={match}
         />
-        <p>s</p>
-        <p>s</p>
-        <p>s</p>
+        <SummonerStats
+          summonerIndex={summonerIndex}
+          seconds={seconds}
+          match={match}
+        />
     </div>
   )
 }
