@@ -3,6 +3,7 @@ import useSummonerStore from '../stores/summonerStore'
 import MatchMetadata from './MatchMetadata'
 import ChampionRunes from './ChampionRunes'
 import SummonerStats from './SummonerStats'
+import Items from './Items'
 
 export default function Match({ match }) {
 
@@ -26,6 +27,10 @@ export default function Match({ match }) {
           summonerIndex={summonerIndex}
           seconds={seconds}
           match={match}
+        />
+        <Items 
+          match={match}
+          summonerIndex={summonerIndex}
         />
     </div>
   )
