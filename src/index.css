@@ -42,15 +42,15 @@ html .placeholder{
 }
 
 .win{
-  @apply border-[#5382e8] bg-[#ecf2ff] dark:bg-[#28344e] p-5 flex rounded my-3 border-l-4 items-center justify-between
+  @apply border-[#5382e8] bg-[#ecf2ff] dark:bg-[#28344e] p-5 flex border-l-4 items-center justify-between grow
 }
 
 .loss{
-  @apply border-[#E84057] bg-[#fff0f3] dark:bg-[#59343b] p-5 flex rounded my-3 border-l-4 items-center justify-between
+  @apply border-[#E84057] bg-[#fff0f3] dark:bg-[#59343b] p-5 flex border-l-4 items-center justify-between grow
 }
 
 .remake{
-  @apply border-[#9090a2] bg-[#f7f7f9] dark:bg-[#515161] p-5 flex rounded my-3 border-l-4 items-center justify-between
+  @apply border-[#9090a2] bg-[#f7f7f9] dark:bg-[#515161] p-5 flex border-l-4 items-center justify-between grow
 }
 
 .item{
