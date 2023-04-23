@@ -8,7 +8,7 @@ export default function ChampionStats({ stats }) {
   return (
     <div className='my-3 flex justify-between'>
         <div className='flex items-center'>
-            <div className='w-10 h-10 mr-3 bg-center bg-cover' style={{ backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/12.23.1/img/champion/${championsLink[stats.championId]}.png')`}}></div>
+            <div className='w-10 h-10 mr-3 bg-center bg-cover' style={{ backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/13.8.1/img/champion/${championsLink[stats.championId]}.png')`}}></div>
 
             <div className='h-10 flex flex-col justify-between'>
                 <h4 className='text-sm font-bold text-black dark:text-white'>{champions[stats.championId]}</h4>
