@@ -43,8 +43,6 @@ export default function RecentlyPlayedWIth() {
 
     tempPastTeammates.sort((a, b) => b.wl.length - a.wl.length)
 
-    console.log(tempPastTeammates)
-
     let pastTeammates = tempPastTeammates.map(item => {
         return({
             name: item.name,

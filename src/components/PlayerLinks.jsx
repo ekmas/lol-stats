@@ -2,12 +2,9 @@ import React from 'react'
 import { useParams } from 'react-router-dom';
 
 export default function PlayerLinks({ match }) {
-  console.log(match)
   let players = match.info.participants;
   let team1 = players.slice(0, 5)
   let team2 = players.slice(5)
-
-  console.log(team1, team2)
 
   let { region } = useParams()
 
