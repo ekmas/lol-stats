@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import useSummonerStore from '../stores/summonerStore'
 import MatchMetadata from './MatchMetadata'
 import ChampionRunes from './ChampionRunes'
@@ -15,6 +15,20 @@ export default function Match({ match }) {
   let won = match.info.participants[summonerIndex].win
   let seconds = match.info.gameEndTimestamp !== undefined;
   let remake = !seconds ? match.info.gameDuration < 211000 : match.info.gameDuration < 211;
+  let players = match.info.participants;
+  const [maxDamage, setMaxDamage] = useState()
+
+  useEffect(() => {
+    let tempArray = []
+
+    for(let i = 0; i < players.length; i++){
+        tempArray.push(players[i].totalDamageDealtToChampions)
+    
+        if(i === 9){
+            setMaxDamage(Math.max(...tempArray))
+        }
+    }
+  }, [])
 
   const [expanded, setExpanded] = useState(false)
 
@@ -37,7 +51,8 @@ export default function Match({ match }) {
           />
           <Items 
             match={match}
-            summonerIndex={summonerIndex}
+            player={match.info.participants[summonerIndex]}
+            size={'27px'}
           />
           <PlayerLinks 
             match={match}
@@ -50,6 +65,7 @@ export default function Match({ match }) {
       {expanded && 
         <ExpandedMatchData 
           match={match}
+          maxDamage={maxDamage}
         />
       }
     </div>
