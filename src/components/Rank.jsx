@@ -34,7 +34,7 @@ export default function Rank({ playerInfo, isNull, queueType }) {
                 }
             </div>
             : 
-            <div className='placeholder h-[52px] mb-5 rounded-lg'></div>
+            <div className={queueType === 'Solo' ? 'placeholder h-[151px] mb-5 rounded-lg' : 'placeholder h-[52px] mb-5 rounded-lg'}></div>
         }
     </>
   )

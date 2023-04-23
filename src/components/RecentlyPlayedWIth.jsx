@@ -79,7 +79,7 @@ export default function RecentlyPlayedWIth() {
                 }
             </div>
         </div>
-      : <div className='placeholder h-[52px] mb-5 rounded-lg'></div>}
+      : <div className='placeholder h-[228px] mb rounded-lg'></div>}
     </>
   )
 }
