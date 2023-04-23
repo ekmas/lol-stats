@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import MatchPlayer from './MatchPlayer';
 
-export default function ExpandedMatchData({ match }) {
+export default function ExpandedMatchData({ match, maxDamage }) {
   let players = match.info.participants;
   let team1 = players.slice(0, 5)
   let team2 = players.slice(5)
@@ -14,7 +14,8 @@ export default function ExpandedMatchData({ match }) {
                 return(
                     <MatchPlayer 
                         player={player}
-                        match={match}
+                        maxDamage={maxDamage}
+                        team={'blue'}
                     />
                 )
             })}
@@ -25,7 +26,8 @@ export default function ExpandedMatchData({ match }) {
                 return(
                     <MatchPlayer 
                         player={player}
-                        match={match}
+                        maxDamage={maxDamage}
+                        team={'red'}
                     />
                 )
             })}
