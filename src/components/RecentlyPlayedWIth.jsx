@@ -59,27 +59,27 @@ export default function RecentlyPlayedWIth() {
 
   return (
     <>
-      {ready ?
-        <div className='w-full bg-white dark:bg-black px-4 py-3 rounded-lg'>
-            <div>
-                <div className='flex items-center justify-between'>
-                    <h2 className='text-black dark:text-white text-lg font-bold'>Recently Played With</h2>
+      {ready &&
+      <div className='w-full bg-white dark:bg-black px-4 py-3 rounded-lg'>
+          <div>
+              <div className='flex items-center justify-between'>
+                  <h2 className='text-black dark:text-white text-lg font-bold'>Recently Played With</h2>
 
-                    {matches.length === 0 && <p className='text-black dark:text-white'>N/A</p>}
+                  {matches.length === 0 && <p className='text-black dark:text-white'>N/A</p>}
+              </div>
+
+              {matches.length !== 0 &&
+                <div className='mt-5'>
+                  {pastTeammates.map(item => {
+                      return(
+                        <Teammate key={item.name} stats={item} />
+                      )
+                  })}
                 </div>
-
-                {matches.length !== 0 &&
-                    <div className='mt-5'>
-                      {pastTeammates.map(item => {
-                          return(
-                            <Teammate key={item.name} stats={item} />
-                          )
-                      })}
-                    </div>
-                }
-            </div>
-        </div>
-      : <div className='placeholder h-[228px] mb rounded-lg'></div>}
+              }
+          </div>
+      </div>
+      }
     </>
   )
 }

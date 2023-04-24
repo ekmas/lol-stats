@@ -29,7 +29,6 @@ export default function SummonerMain() {
           <div className='h-[122px] placeholder mb-3'></div>
           <div className='h-[122px] placeholder mb-3'></div>
           <div className='h-[122px] placeholder mb-3'></div>
-          <div className='h-[122px] placeholder mb-3'></div>
         </div>
       }
     </>
