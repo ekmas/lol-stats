@@ -22,7 +22,7 @@ export default function ChampionRunes({ match }) {
 
   return (
     <div className='grid grid-cols-[1fr_1fr] gap-[10px] h-[56px]'>
-        <div className='bg-contain w-[56px] h-[56px] relative' style={{ backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/13.8.1/img/champion/${match.info.participants[summonerIndex].championName}.png')` }}>
+        <div className='bg-contain w-[56px] h-[56px] relative' style={{ backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/13.8.1/img/champion/${championsLink[match.info.participants[summonerIndex].championId]}.png')` }}>
             <div className='absolute left-0 bottom-0 w-[18px] h-[18px] grid place-items-center text-xs bg-black text-white'>
                 <p>{match.info.participants[summonerIndex].champLevel}</p>
             </div>
