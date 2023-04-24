@@ -1,5 +1,5 @@
 import React from 'react'
-import { runes, summonerSpell } from '../data'
+import { championsLink, runes, summonerSpell } from '../data'
 import Items from './Items';
 import { useParams } from 'react-router-dom';
 
@@ -10,8 +10,6 @@ export default function MatchPlayer({ player, maxDamage, team }) {
   let damagePercent = (player.totalDamageDealtToChampions / maxDamage) * 100
 
   let { region } = useParams()
-
-  console.log(player)
 
   /**
   * @param k kills @param d deaths @param a assists
@@ -26,7 +24,7 @@ export default function MatchPlayer({ player, maxDamage, team }) {
   return (
     <div className='px-4 flex items-center justify-between my-3 text-sm text-black dark:text-white'>
         <div className='flex items-center'>
-            <div className="w-[45px] h-[45px] mr-1 relative bg-center bg-cover" style={{ backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/13.8.1/img/champion/${player.championName}.png')` }}>
+            <div className="w-[45px] h-[45px] mr-1 relative bg-center bg-cover" style={{ backgroundImage: `url('http://ddragon.leagueoflegends.com/cdn/13.8.1/img/champion/${championsLink[player.championId]}.png')` }}>
                 <div className="absolute left-0 bottom-0 p-0.5 grid place-items-center h-[17px] text-[11px] bg-black text-white">
                     <p>{player.champLevel}</p>
                 </div>

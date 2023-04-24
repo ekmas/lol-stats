@@ -15,7 +15,7 @@ export default function PlayerLinks({ match }) {
             <div>
                 {team1.map(player => {
                     return(
-                        <div className='flex items-center'>
+                        <div key={player.championId} className='flex items-center'>
                             <img className='w-[14px] h-[14px] mr-1' key={crypto.randomUUID()} src={`http://ddragon.leagueoflegends.com/cdn/13.8.1/img/champion/${championsLink[player.championId]}.png`} alt="champion" />
                             <a className='w-20 hover:underline overflow-ellipsis overflow-hidden whitespace-nowrap text-[11px] text-black dark:text-white' href={`/summoner/${region}/${player.summonerName}`}>{player.summonerName}</a>
                         </div>
@@ -25,7 +25,7 @@ export default function PlayerLinks({ match }) {
             <div>
                 {team2.map(player => {
                     return(
-                        <div className='flex items-center'>
+                        <div key={player.championId} className='flex items-center'>
                             <img className='w-[14px] h-[14px] mr-1' key={crypto.randomUUID()} src={`http://ddragon.leagueoflegends.com/cdn/13.8.1/img/champion/${championsLink[player.championId]}.png`} alt="champion" />
                             <a className='w-20 hover:underline overflow-ellipsis overflow-hidden whitespace-nowrap text-[11px] text-black dark:text-white' href={`/summoner/${region}/${player.summonerName}`}>{player.summonerName}</a>
                         </div>
