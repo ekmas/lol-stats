@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import MatchPlayer from './MatchPlayer';
 
 export default function ExpandedMatchData({ match, maxDamage }) {
@@ -16,6 +16,7 @@ export default function ExpandedMatchData({ match, maxDamage }) {
                         player={player}
                         maxDamage={maxDamage}
                         team={'blue'}
+                        key={player.championId}
                     />
                 )
             })}
@@ -28,6 +29,7 @@ export default function ExpandedMatchData({ match, maxDamage }) {
                         player={player}
                         maxDamage={maxDamage}
                         team={'red'}
+                        key={player.championId}
                     />
                 )
             })}

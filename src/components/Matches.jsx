@@ -1,14 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import useSummonerStore from "../stores/summonerStore"
 import Match from './Match'
 
 export default function Matches() {
-
   let matches = useSummonerStore((state) => state.matches)
-
-  useEffect(() => {
-    console.log(matches)
-  }, [matches])
 
   return (
     <div>
