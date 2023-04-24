@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Matches from './Matches'
 import useSummonerStore from '../stores/summonerStore'
+import Mastery from './Mastery'
 
 export default function SummonerMain() {
 
@@ -19,7 +20,7 @@ export default function SummonerMain() {
             <div className='pt-2'>
                 {
                     activeSection === 'matches' ? <Matches /> : 
-                    activeSection === 'mastery' ? <p>mastery</p> : 
+                    activeSection === 'mastery' ? <Mastery /> : 
                     <p>challenges</p>
                 }
             </div>
