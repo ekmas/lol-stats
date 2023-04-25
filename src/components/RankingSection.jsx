@@ -34,8 +34,6 @@ export default function RankingSection() {
           wins: rank[flex].wins,
           losses: rank[flex].losses
         })
-
-        console.log('length is 2')
       }else if(rank.length === 1){
         // if rank.length === 1 it means that player is ranked in one of queueTypes so we have to find out which one
         
@@ -62,7 +60,6 @@ export default function RankingSection() {
             losses: rank[0].losses
           })
         }
-        console.log('length is 1')
       }else{
         // if rank.length === 0 it means player is not ranked in any queueType
     

@@ -17,6 +17,14 @@ body{
   height: 100svh;
 }
 
+html.dark{
+  background-color: #1d1d1d;
+}
+
+html{
+  background-color: #e2e2e2;
+}
+
 html.dark .placeholder{
   background-image: linear-gradient(
       to right,

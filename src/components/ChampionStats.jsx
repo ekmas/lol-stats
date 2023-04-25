@@ -17,7 +17,7 @@ export default function ChampionStats({ stats }) {
             </div>
         </div>
         <div className='flex items-center'>
-            <p className='text-sm mr-3 font-medium' style={{ color: winrate > 50 ? 'green' : winrate === '50' ? 'gray' : 'red' }}>{winrate}%</p>
+            <p className='text-sm mr-3 font-medium' style={{ color: winrate > 50 ? '#E84057' : 'gray' }}>{winrate}%</p>
 
             <p className='text-sm text-black dark:text-white'>{stats.wins}W/{stats.losses}L</p>
         </div>
