@@ -23,6 +23,10 @@ export default function Mastery() {
 
   return (
     <div>
+        {mastery.length === 0 &&
+          <p className='text-black text-center p-3 pt-10 dark:text-white'>This summoner doesn't have any masteries yet.</p>
+        }
+
         <div className='relative bottom-48' ref={scroll}></div>
         <div className='grid grid-cols-[1fr_1fr] gap-3 mt-3'>
           {currentMasteries.map(item => {
@@ -35,7 +39,7 @@ export default function Mastery() {
               )
           })}
         </div>
-        {!showAll && 
+        {!showAll && mastery.length > 20 &&
           <div className='text-center'>
             <button onClick={showAllMasteries} className='bg-light-blue hover:bg-blue transition rounded-lg px-7 py-2 my-5 inline-block text-white'>Show all</button>
           </div>
