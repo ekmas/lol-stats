@@ -43,10 +43,11 @@ const useSummonerStore = create((set, get) => ({
                         console.log(error)
                     })
                 
-                fetch(`/.netlify/functions/fetchallmatches?region=${generalRegion[region]}&puuid=${get().puuid}&start=0`)
-                    .then(response => response.json())
-                    .then(data => {
-                        let index = data.length < 5 ? data.length : 5
+                if(get().summonerInfo.level > 10){
+                    fetch(`/.netlify/functions/fetchallmatches?region=${generalRegion[region]}&puuid=${get().puuid}&start=0`)
+                        .then(response => response.json())
+                        .then(data => {
+                        let index = data.length < 15 ? data.length : 15
                 
                         let matches = data.slice(0, index)
         
@@ -83,7 +84,10 @@ const useSummonerStore = create((set, get) => ({
                         function parseJSON(response) {
                             return response.json();
                         }   
-                })
+                    })
+                }else{
+                    set({ ready: true })
+                }
             })
             .catch(error => {
                 console.log(error)
