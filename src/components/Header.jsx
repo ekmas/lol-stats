@@ -18,11 +18,10 @@ export default function Header() {
                   <h2 className='text-2xl text-black dark:text-white font-bold leading-[29px]'>LoL Stats</h2>
               </Link>
 
-              <div className='w-[520px] transition ease-linear duration-100 flex group justify-between items-center'>
-                  <div className='navlinks w-[450px] hover:text-[#1d1d1d80] dark:hover:text-[#ededed80] flex text-black dark:text-white justify-between items-center'>
+              <div className='w-[420px] transition ease-linear duration-100 flex group justify-between items-center'>
+                  <div className='navlinks w-[330px] hover:text-[#1d1d1d80] dark:hover:text-[#ededed80] flex text-black dark:text-white justify-between items-center'>
                     <Link className='transition ease-in-out hover:text-black dark:hover:text-white' to={'/'}>Home</Link>
                     <Link className='transition ease-in-out hover:text-black dark:hover:text-white' to={'/leaderboard'}>Leaderboard</Link>
-                    <Link className='transition ease-in-out hover:text-black dark:hover:text-white' to={'/free-rotation'}>Free rotation</Link>
                     <Link className='transition ease-in-out hover:text-black dark:hover:text-white' to={'/about'}>About</Link>
                   </div>
                   <button onClick={() => {setTheme(theme === "dark" ? "light" : "dark")}}>
