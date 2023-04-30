@@ -49,6 +49,30 @@ html .placeholder{
   animation: bgPos 1s linear infinite;
 }
 
+html.dark .inverted-placeholder{
+  background-image: linear-gradient(
+      to right,
+      #cacaca 0%,
+      #a3a3a3 20%,
+      #cacaca 40%,
+      #cacaca 100%
+  ) !important;
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
+html .inverted-placeholder{
+  background-image: linear-gradient(
+      to right,
+      #121212 0%,
+      #2b2b2b 20%,
+      #121212 40%,
+      #121212 100%
+  ) !important;
+  background-size: 200% 100%;
+  animation: bgPos 1s linear infinite;
+}
+
 .win{
   @apply border-[#5382e8] bg-[#ecf2ff] dark:bg-[#28344e] p-5 flex border-l-4 items-center justify-between grow
 }
@@ -63,6 +87,41 @@ html .placeholder{
 
 .item{
   @apply w-[27px] h-[27px]
+}
+
+html th, html td, html tr{
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+html.dark th, html.dark td, html.dark tr{
+  border-collapse: collapse;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+html th{
+  background-color: #e5e5e5;
+}
+
+html tr{
+  background-color: #e0e0e0;
+}
+
+html.dark th{
+  background-color: #282830;
+}
+
+html.dark tr{
+  background-color: #31313C;
+}
+
+.link{
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover{
+  text-decoration: underline;
 }
 
 @keyframes bgPos {
