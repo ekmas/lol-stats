@@ -4,6 +4,7 @@ import { ThemeContext } from "./contexts/ThemeContext";
 import Home from "./pages/Home"
 import Summoner from "./pages/Summoner";
 import Leaderboard from "./pages/Leaderboard";
+import About from "./pages/About";
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -31,6 +32,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/summoner/:region/:username" element={<Summoner />}/>
         <Route path="/leaderboard" element={<Leaderboard />}/>
+        <Route path="/about" element={<About />}/>
       </Routes>
     </ThemeContext.Provider>
   )
