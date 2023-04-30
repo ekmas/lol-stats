@@ -24,8 +24,8 @@ export default function RegionModal({ isModalActive, setIsModalActive, setRegion
   }
 
   return (
-    <div onClick={closeModal} className={isModalActive ? 'fixed w-full h-full left-0 top-0 flex bg-transparent items-center backdrop-blur-sm justify-center duration-200 visible' : 'invisible duration-200 fixed w-full h-full left-0 top-0 flex bg-transparent items-center justify-center'}>
-        <div onClick={(e) => {e.stopPropagation()}} className={isModalActive ? 'pt-10 relative z-10 w-[500px] bg-white dark:bg-black rounded-lg opacity-100 transition visible' : 'invisible transition opacity-50 z-10 rounded-lg'}>
+    <div onClick={closeModal} className={isModalActive ? 'z-20 fixed w-full h-full left-0 top-0 flex bg-transparent items-center backdrop-blur-sm justify-center duration-200 visible' : 'z-20 invisible duration-200 fixed w-full h-full left-0 top-0 flex bg-transparent items-center justify-center'}>
+        <div onClick={(e) => {e.stopPropagation()}} className={isModalActive ? 'pt-10 relative z-10 w-[500px] bg-white dark:bg-black rounded-lg opacity-100 visible' : 'invisible opacity-50 z-10 rounded-lg'}>
             
             <MdClose onClick={closeModal} className='absolute top-3 right-3 w-5 h-5 cursor-pointer'/>
             {activeModal === 'exactRegion' && <MdArrowBack onClick={() => {setActiveModal('generalRegion')}} className='absolute top-3 left-3 w-5 h-5 cursor-pointer' />}
