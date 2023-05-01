@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useLayoutEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import { ThemeContext } from "./contexts/ThemeContext";
 import Home from "./pages/Home"
@@ -9,12 +9,15 @@ import About from "./pages/About";
 function App() {
   const [theme, setTheme] = useState(null);
 
-  useEffect(() => {
-    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-      setTheme('dark');
-    }
-    else {
-      setTheme('light');
+  useLayoutEffect(() => {
+    if(localStorage){
+      setTheme(localStorage.getItem('theme'))
+    }else{
+      if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+        setTheme('dark');
+      }else {
+        setTheme('light');
+      }
     }
   }, [])
 

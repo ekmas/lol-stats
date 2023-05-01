@@ -10,6 +10,16 @@ export default function Header() {
 
   const scrollPosition = useScrollPosition()
 
+  let handleThemeButton = () => {
+    if(theme === 'dark'){
+      setTheme('light')
+      localStorage.setItem('theme', 'light')
+    }else{
+      setTheme('dark')
+      localStorage.setItem('theme', 'dark')
+    }
+  }
+
   return (
     <header className="fixed w-full top-0 left-0 dark:bg-gray bg-white-gray z-10">
         <nav className={scrollPosition > 0 ? 'shadow transition-shadow shadow-[#1d1d1d48] dark:shadow-[#ffffff]' : 'shadow-none'}>
@@ -24,7 +34,7 @@ export default function Header() {
                     <Link className='transition ease-in-out hover:text-black dark:hover:text-white' to={'/leaderboard'}>Leaderboard</Link>
                     <Link className='transition ease-in-out hover:text-black dark:hover:text-white' to={'/about'}>About</Link>
                   </div>
-                  <button onClick={() => {setTheme(theme === "dark" ? "light" : "dark")}}>
+                  <button onClick={handleThemeButton}>
                     {theme === 'light' ? 
                       <MdDarkMode className='w-7 h-7'/> : 
                       <MdLightMode className='fill-white w-7 h-7'/>
