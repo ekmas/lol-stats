@@ -2,6 +2,8 @@ import { create } from "zustand";
 import { generalRegion, routingValues } from "../data"
 
 const useSummonerStore = create((set, get) => ({
+    error: false,
+    errorMsg: '',
     username: null,
     id: null,
     puuid: null,
@@ -16,6 +18,7 @@ const useSummonerStore = create((set, get) => ({
     ready: false,
     reset: () => {
         set({ ready: false })
+        set({ error: false })
         set({ puuid: '' })
         set({ matches: [] })
     },
@@ -33,6 +36,10 @@ const useSummonerStore = create((set, get) => ({
                     .then(data => {
                         set({ mastery: data })
                     })
+                    .catch(error => {
+                        set({ errorMsg: "App exceed it's api limits. Please try again in 2 minutes." })
+                        set({ error: true })
+                    })
 
                 fetch(`/.netlify/functions/fetchrank?region=${routingValues[region]}&id=${get().id}`)
                     .then(response => response.json())
@@ -40,7 +47,8 @@ const useSummonerStore = create((set, get) => ({
                         set({ rank: data })
                     })
                     .catch(error => {
-                        console.log(error)
+                        set({ errorMsg: "App exceed it's api limits. Please try again in 2 minutes." })
+                        set({ error: true })
                     })
                 
                 if(get().summonerInfo.level > 10){
@@ -62,7 +70,8 @@ const useSummonerStore = create((set, get) => ({
                             .then(checkStatus)
                             .then(parseJSON)
                             .catch(error => {
-                                console.log(error)
+                                set({ errorMsg: 'App exceed it"s api limits. Please try again in 2 minutes.' })
+                                set({ error: true })
                             })
                         ))
                         .then(data => {
@@ -70,7 +79,8 @@ const useSummonerStore = create((set, get) => ({
                             set({ ready: true })
                         })
                         .catch(error => {
-                            console.log(error)
+                            set({ errorMsg: 'App exceed it"s api limits. Please try again in 2 minutes.' })
+                            set({ error: true })
                         })
         
                         function checkStatus(response) {
@@ -85,12 +95,17 @@ const useSummonerStore = create((set, get) => ({
                             return response.json();
                         }   
                     })
+                    .catch(error => {
+                        set({ errorMsg: "App exceed it's api limits. Please try again in 2 minutes." })
+                        set({ error: true })
+                    })
                 }else{
                     set({ ready: true })
                 }
             })
             .catch(error => {
-                console.log(error)
+                set({ errorMsg: 'The summoner you searched for does not exist.' })
+                set({ error: true })
             })
     }
 }))
