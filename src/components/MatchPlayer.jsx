@@ -42,7 +42,7 @@ export default function MatchPlayer({ player, maxDamage, team }) {
         </div>
         <a href={`/summoner/${region}/${player.summonerName}`} className='hover:underline text-sm w-[170px] text-center'>{player.summonerName}</a>
         <div className='text-center'>
-            <div className='w-[100px] h-2 p-0.5 bg-gray rounded-full'>
+            <div className='w-[100px] h-2 p-0.5 bg-white outline outline-gray80 dark:outline-white-gray80 outline-1 dark:bg-gray rounded-full'>
                 <div style={{ width: `${damagePercent}%` }} className={team === 'blue' ? 'bg-blue h-full' : 'bg-red h-full'}></div>
             </div>
             <p>{player.totalDamageDealtToChampions} DMG</p>
