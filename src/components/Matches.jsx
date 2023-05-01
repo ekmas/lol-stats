@@ -5,10 +5,6 @@ import Match from './Match'
 export default function Matches() {
   let matches = useSummonerStore((state) => state.matches)
 
-  useEffect(() => {
-    console.log(matches)
-  }, [matches])
-
   return (
     <div>
         {matches.length === 0 && 

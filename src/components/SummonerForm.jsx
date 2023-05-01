@@ -35,7 +35,7 @@ export default function SummonerForm() {
           <MdSearch className='w-7 h-7 mr-5'/>
 
           <form onSubmit={handleSubmit}>
-              <input onChange={e => {setUsername(e.target.value)}} className='outline-none bg-transparent w-[280px]' placeholder='Enter summoner name or "test"' type="text" name="summonerName" id="summonerName"/>
+              <input onChange={e => {setUsername(e.target.value)}} className='outline-none bg-transparent w-[280px]' placeholder='Enter summoner name' type="text" name="summonerName" id="summonerName"/>
           </form>
         </div>
 
