@@ -10,62 +10,43 @@ export default function RankingSection() {
   const [isSoloNull, setIsSoloNull] = useState(true)
   const [isFlexNull, setIsFlexNull] = useState(true)
 
-  useEffect(() => {
-    if(rank.length === 2){
-        // if rank.length === 2 it means player is ranked in both of queueTypes
-        let solo = rank.findIndex(item => item.queueType === 'RANKED_SOLO_5x5');
-        let flex = rank.findIndex(item => item.queueType === 'RANKED_FLEX_SR');
+  function handleRankObject(queueType) {
+    return({
+      tier: rank[queueType].tier,
+      rank: rank[queueType].rank,
+      leaguePoints: rank[queueType].leaguePoints,
+      wins: rank[queueType].wins,
+      losses: rank[queueType].losses
+    })
+  }
 
+  useEffect(() => {
+    let solo = rank.findIndex(item => item.queueType === 'RANKED_SOLO_5x5');
+    let flex = rank.findIndex(item => item.queueType === 'RANKED_FLEX_SR');
+
+    if(rank.length === 3){
+      setIsSoloNull(false)
+      setIsFlexNull(false)
+
+      setPlayerSoloInfo(handleRankObject(solo))
+      setPlayerFlexInfo(handleRankObject(flex))
+    }else if(rank.length === 0){
+      setIsSoloNull(true)
+      setIsFlexNull(true)
+    }else{
+      if(solo !== -1){
+        setPlayerSoloInfo(handleRankObject(solo))
         setIsSoloNull(false)
-        setIsFlexNull(false)
-    
-        setPlayerSoloInfo({
-          tier: rank[solo].tier,
-          rank: rank[solo].rank,
-          leaguePoints: rank[solo].leaguePoints,
-          wins: rank[solo].wins,
-          losses: rank[solo].losses
-        })
-    
-        setPlayerFlexInfo({
-          tier: rank[flex].tier,
-          rank: rank[flex].rank,
-          leaguePoints: rank[flex].leaguePoints,
-          wins: rank[flex].wins,
-          losses: rank[flex].losses
-        })
-      }else if(rank.length === 1){
-        // if rank.length === 1 it means that player is ranked in one of queueTypes so we have to find out which one
-        
-        if(rank[0].queueType === 'RANKED_SOLO_5x5'){
-          setIsSoloNull(false)
-          setIsFlexNull(true)
-    
-          setPlayerSoloInfo({
-            tier: rank[0].tier,
-            rank: rank[0].rank,
-            leaguePoints: rank[0].leaguePoints,
-            wins: rank[0].wins,
-            losses: rank[0].losses
-          })
-        }else{
-          setIsSoloNull(true)
-          setIsFlexNull(false)
-    
-          setPlayerFlexInfo({
-            tier: rank[0].tier,
-            rank: rank[0].rank,
-            leaguePoints: rank[0].leaguePoints,
-            wins: rank[0].wins,
-            losses: rank[0].losses
-          })
-        }
       }else{
-        // if rank.length === 0 it means player is not ranked in any queueType
-    
         setIsSoloNull(true)
+      }
+      if(flex !== -1){
+        setPlayerFlexInfo(handleRankObject(solo))
+        setIsFlexNull(false)
+      }else{
         setIsFlexNull(true)
       }
+    }
   }, [rank])
 
   return (
