@@ -34,7 +34,7 @@ export default function Summoner() {
       <Header />
       <SummonerHeader />
       <div className={error ? 'overflow-hidden pb-[50px] dark:bg-gray bg-white-gray' : 'pb-[50px] dark:bg-gray bg-white-gray'}>
-        <div className='max-w-[1300px] w-auto mx-auto grid gap-5 grid-cols-[350px_1fr]'>
+        <div className='max-w-[1300px] px-7 w-auto mx-auto grid gap-5 grid-cols-[350px_1fr]'>
           <SummonerAside />
           <SummonerMain />
         </div>

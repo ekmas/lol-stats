@@ -17,6 +17,14 @@ export default {
         'blue': '#2951AC',
         'red': '#E84057',
         'light-blue': '#3b6cde'
+      },
+      screens: {
+        'm700': {'max': '700px'},
+        'm600': {'max': '600px'},
+        'm500': {'max': '500px'},
+        'm400': {'max': '400px'},
+        'm350': {'max': '350px'},
+        'h550': { 'raw': '(max-height: 550px)' },
       }
     },
   },

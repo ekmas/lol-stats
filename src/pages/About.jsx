@@ -8,7 +8,7 @@ export default function About() {
         <Header />
         <div className='flex flex-col items-center pt-[200px] text-center text-black dark:text-white'>
           <h2 className='font-bold text-3xl'>About</h2>
-          <div className='max-w-[1300px] w-auto mx-auto py-7'>
+          <div className='max-w-[1300px] px-7 w-auto mx-auto py-7'>
             <p className='my-6'>LoL Stats is a website where you can check your rank, match history and mastery points.</p>
             <p className='my-6'>When the user enters his username and region, the website fetches data from <a className='text-blue hover:underline' target='_blank' href="https://developer.riotgames.com/">Riot API</a> and then displays the data.</p>
             <p className='my-6'>You can also check top 300 players on each server.</p>
