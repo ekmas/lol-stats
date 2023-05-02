@@ -22,13 +22,13 @@ export default function MobileNav({ active, setIsMobileNavActive, theme, setThem
 
   return (
     <nav style={active ? {top: '0'} : {top: '-100%'}} className='fixed flex justify-center items-center w-screen h-screen top-0 transition-[top] h550:pt-[70px] duration-500 z-10 bg-white-gray dark:bg-gray'>
-        <div className='w-full h-[200px] flex flex-col items-center justify-between text-2xl m500:text-lg'>
+        <div className='w-full h-[200px] flex flex-col items-center justify-between text-2xl'>
             <button onClick={() => {handleNavLinks('/')}}>Home</button>
             <button onClick={() => {handleNavLinks('/leaderboard')}}>Leaderboard</button>
             <button onClick={() => {handleNavLinks('/about')}}>About</button>
             <button onClick={handleThemeButton}>
             {theme === 'light' ? 
-                <MdDarkMode className='w-7 h-7'/> : 
+                <MdDarkMode className='w-7 h-7 fill-black'/> : 
                 <MdLightMode className='fill-white w-7 h-7'/>
             }
             </button>

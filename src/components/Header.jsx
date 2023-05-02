@@ -44,10 +44,10 @@ export default function Header() {
                     <Link className='transition ease-in-out hover:text-black dark:hover:text-white' to={'/about'}>About</Link>
                   </div>
                   <button onClick={handleThemeButton}>
-                    {theme === 'light' ? 
-                      <MdDarkMode className='w-7 h-7'/> : 
-                      <MdLightMode className='fill-white w-7 h-7'/>
-                    }
+                  {theme === 'light' ? 
+                    <MdDarkMode className='w-7 h-7 fill-black'/> : 
+                    <MdLightMode className='fill-white w-7 h-7'/>
+                  }
                   </button>
               </div>
 

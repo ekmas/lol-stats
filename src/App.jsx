@@ -8,9 +8,10 @@ import About from "./pages/About";
 
 function App() {
   const [theme, setTheme] = useState(null);
+  let localStorageTheme = localStorage.getItem('theme')
 
   useLayoutEffect(() => {
-    if(localStorage){
+    if(localStorageTheme !== null){
       setTheme(localStorage.getItem('theme'))
     }else{
       if(window.matchMedia('(prefers-color-scheme: dark)').matches){
