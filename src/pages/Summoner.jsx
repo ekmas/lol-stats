@@ -30,11 +30,11 @@ export default function Summoner() {
   }, [error])
 
   return (
-    <ErrorBoundary fallback={<ErrorScreen error={true} msg={"App exceed it's api limits. Please try again in 2 minutes."}/>}>
+    <ErrorBoundary fallback={<ErrorScreen error={true} msg={"App exceeded it's api limits. Please try again in 2 minutes."}/>}>
       <Header />
       <SummonerHeader />
       <div className={error ? 'overflow-hidden pb-[50px] dark:bg-gray bg-white-gray' : 'pb-[50px] dark:bg-gray bg-white-gray'}>
-        <div className='max-w-[1300px] px-7 w-auto mx-auto grid gap-5 grid-cols-[350px_1fr]'>
+        <div className='max-w-[1300px] m1050:grid-cols-[330px_1fr] m1000:grid-cols-[1fr] px-7 m350:px-4 w-auto mx-auto grid gap-5 grid-cols-[350px_1fr]'>
           <SummonerAside />
           <SummonerMain />
         </div>

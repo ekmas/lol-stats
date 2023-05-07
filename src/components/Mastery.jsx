@@ -28,7 +28,7 @@ export default function Mastery() {
         }
 
         <div className='relative bottom-48' ref={scroll}></div>
-        <div className='grid grid-cols-[1fr_1fr] gap-3 mt-3'>
+        <div className='grid grid-cols-[1fr_1fr] m700:grid-cols-[1fr] gap-3 mt-3'>
           {currentMasteries.map(item => {
               return(
                   <MasteryItem 

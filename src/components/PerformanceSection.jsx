@@ -72,16 +72,16 @@ export default function PerformanceSection() {
   return (
     <>
         {ready ?
-            <div className='w-full bg-white dark:bg-black px-4 py-3 mb-5 rounded-lg'>
+            <div className='w-full bg-white dark:bg-black px-4 py-3 mb-5 m1000:mb-0 m700:mb-5 rounded-lg'>
                 <div>
                     <div className='flex items-center justify-between'>
-                        <h2 className='text-black dark:text-white text-lg font-bold'>Recent Performance</h2>
+                        <h2 className='text-black dark:text-white text-lg m400:text-base font-bold'>Recent Performance</h2>
 
                         {matches.length === 0 && <p className='text-black dark:text-white'>N/A</p>}
                     </div>
 
                     {matches.length !== 0 &&
-                        <div className='mt-5'>
+                        <div className='mt-5 m400:mt-3'>
                             {playedChampions.map(item => {
                                 return(
                                     <ChampionStats key={item.championId} stats={item}/>

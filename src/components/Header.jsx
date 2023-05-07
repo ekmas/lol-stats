@@ -31,8 +31,8 @@ export default function Header() {
   return (
     <>
       <header className="fixed w-full top-0 left-0 dark:bg-gray bg-white-gray z-20">
-        <nav className={scrollPosition > 0 ? 'shadow transition-shadow shadow-[#1d1d1d48] dark:shadow-[#ffffff]' : 'shadow-none'}>
-            <div className='max-w-[1300px] px-7 py-7 flex justify-between items-center w-auto mx-auto'>
+        <nav className={scrollPosition > 0 && !isMobileNavActive ? 'shadow transition-shadow shadow-[#1d1d1d48] dark:shadow-[#ffffff80]' : 'shadow-none'}>
+            <div className='max-w-[1300px] px-7 py-7 m700:py-4 m350:px-4 flex justify-between items-center w-auto mx-auto'>
               <Link to={'/'}>
                   <h2 className='text-2xl text-black dark:text-white font-bold leading-[29px]'>LoL Stats</h2>
               </Link>
@@ -51,8 +51,8 @@ export default function Header() {
                   </button>
               </div>
 
-              <span onClick={handleNavToggle} className='hidden m700:block'>
-                  <Hamburger size={25}/>
+              <span onClick={handleNavToggle} className='hidden m700:block text-black dark:text-white'>
+                  <Hamburger size={18}/>
               </span>
             </div>
         </nav>

@@ -16,17 +16,17 @@ export default function MasteryItem({ item, rank }) {
   }
 
   return (
-    <div className='h-[200px] hover:bg-black hover:text-white transition dark:hover:bg-white dark:hover:text-black text-black dark:text-white rounded-lg flex justify-between p-4 bg-cover bg-center border border-black dark:border-white' key={item.championId}>
+    <div className='h-[200px] m450:h-[170px] hover:bg-black hover:text-white transition dark:hover:bg-white dark:hover:text-black text-black dark:text-white rounded-lg flex justify-between p-4 bg-cover bg-center border border-black dark:border-white' key={item.championId}>
         <div className='flex flex-col justify-between h-full'>
-          <img width={70} src={`http://ddragon.leagueoflegends.com/cdn/13.8.1/img/champion/${championsLink[item.championId]}.png`}alt="" />
+          <img className='w-[70px] m450:w-[55px]' src={`http://ddragon.leagueoflegends.com/cdn/13.8.1/img/champion/${championsLink[item.championId]}.png`}alt="" />
           <div>
-            <h2 className='font-bold text-2xl'>{champions[item.championId]}</h2>
-            <p className='text-lg'>{formatNumber(item.championPoints)}</p>
+            <h2 className='font-bold text-2xl m450:text-xl'>{champions[item.championId]}</h2>
+            <p className='text-lg m450:text-base'>{formatNumber(item.championPoints)}</p>
           </div>
         </div>
         <div className='flex flex-col justify-between items-end h-full'>
-          <h2 className='text-2xl'>#{rank}</h2>
-          <img width={60} src={getImage(item.championLevel)} alt="mastery icon" />
+          <h2 className='text-2xl m450:text-xl'>#{rank}</h2>
+          <img className='w-[60px] m450:w-10' src={getImage(item.championLevel)} alt="mastery icon" />
         </div>
     </div>
   )

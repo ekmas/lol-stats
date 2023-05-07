@@ -74,20 +74,20 @@ html .inverted-placeholder{
 }
 
 .win{
-  @apply border-[#5382e8] bg-[#ecf2ff] dark:bg-[#28344e] p-5 flex border-l-4 items-center justify-between grow
+  @apply border-[#5382e8] bg-[#ecf2ff] dark:bg-[#28344e] p-5 flex border-l-4 items-center justify-between grow relative m650:py-12 m400:px-2.5 m400:py-11
 }
 
 .loss{
-  @apply border-[#E84057] bg-[#fff0f3] dark:bg-[#59343b] p-5 flex border-l-4 items-center justify-between grow
+  @apply border-[#E84057] bg-[#fff0f3] dark:bg-[#59343b] p-5 flex border-l-4 items-center justify-between grow relative m650:py-12 m400:px-2.5 m400:py-11
 }
 
 .remake{
-  @apply border-[#9090a2] bg-[#f7f7f9] dark:bg-[#515161] p-5 flex border-l-4 items-center justify-between grow
+  @apply border-[#9090a2] bg-[#f7f7f9] dark:bg-[#515161] p-5 flex border-l-4 items-center justify-between grow relative m650:py-12 m400:px-2.5 m400:py-11
 }
 
-.item{
+/* .item{
   @apply w-[27px] h-[27px]
-}
+} */
 
 html th, html td, html tr{
   border-collapse: collapse;
@@ -156,6 +156,12 @@ html.dark *::-webkit-scrollbar-thumb{
 
 *::-webkit-scrollbar{
   width: 16px;
+}
+
+@media (max-width: 400px){
+  .expand-btn{
+    width: 30px !important;
+  }
 }
 
 @keyframes bgPos {

@@ -11,7 +11,7 @@ export default function PlayerLinks({ match }) {
 
   return (
     <>
-        <div className='grid grid-cols-[1fr_1fr] gap-[10px]'>
+        <div className='grid grid-cols-[1fr_1fr] gap-[10px] m1280:hidden m1000:grid m900:hidden'>
             <div>
                 {team1.map(player => {
                     return(

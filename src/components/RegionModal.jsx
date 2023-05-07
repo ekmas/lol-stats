@@ -30,7 +30,7 @@ export default function RegionModal({ isModalActive, setIsModalActive, setRegion
             <MdClose onClick={closeModal} className='absolute top-3 right-3 w-5 h-5 cursor-pointer'/>
             {activeModal === 'exactRegion' && <MdArrowBack onClick={() => {setActiveModal('generalRegion')}} className='absolute top-3 left-3 w-5 h-5 cursor-pointer' />}
             
-            <h2 className='text-center text-2xl'>Choose your region</h2>
+            <h2 className='text-center text-2xl m600:text-xl'>Choose your region</h2>
 
             {activeModal === 'generalRegion' ?
               <div className='grid grid-cols-[1fr_1fr] bg-white text-xl m600:text-sm dark:bg-black mt-3 p-6 gap-5 m600:h-[200px] h-[400px]'>
@@ -43,7 +43,7 @@ export default function RegionModal({ isModalActive, setIsModalActive, setRegion
               <div className='p-6 grid gap-5 max-h-[410px] h550:overflow-auto'>
                 {regionsArray.map(region => {
                   return(
-                    <button onClick={() => {selectRegionButton(region.toLowerCase())}} key={region} className='w-full py-2 border rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black'>{region}</button>
+                    <button onClick={() => {selectRegionButton(region.toLowerCase())}} key={region} className='w-full py-2 border rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black m600:text-sm m600:py-1.5'>{region}</button>
                   )
                 })}
               </div>

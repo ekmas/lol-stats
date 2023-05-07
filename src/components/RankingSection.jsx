@@ -41,7 +41,7 @@ export default function RankingSection() {
         setIsSoloNull(true)
       }
       if(flex !== -1){
-        setPlayerFlexInfo(handleRankObject(solo))
+        setPlayerFlexInfo(handleRankObject(flex))
         setIsFlexNull(false)
       }else{
         setIsFlexNull(true)

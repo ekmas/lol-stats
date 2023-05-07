@@ -101,10 +101,10 @@ let handleGameSeconds = (gameDuration, seconds) => {
 }
 
   return (
-    <div className="flex flex-col items-center text-black dark:text-white text-sm w-[100px]">
-        <h4 className='font-medium'>{getGameMode(match.info.queueId)}</h4>
-        <p className='text-xs mt-[4px] mb-[6px]'>{handleWhenWasPlayed(gameDate)}</p>
-        <div className="flex items-center">
+    <div className="flex flex-col items-center text-black dark:text-white text-sm w-[100px] m650:absolute m650:flex-row m650:w-full m650:left-0 m650:px-5 m650:items-center m650:justify-between m650:top-4 m400:px-2.5">
+        <h4 className='font-medium m650:mr-5 m400:text-xs'>{getGameMode(match.info.queueId)}</h4>
+        <p className='text-xs mt-[4px] mb-[6px] m650:m-0'>{handleWhenWasPlayed(gameDate)}</p>
+        <div className="flex items-center m650:hidden">
             <p className='mr-2 font-medium'>{remake ? 'Remake' : won ? 'Victory' : 'Defeat'}</p> <p>{handleGameMinutes(match.info.gameDuration, seconds)}:{handleGameSeconds(match.info.gameDuration, seconds)}</p>
         </div>
     </div>

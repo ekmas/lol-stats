@@ -50,16 +50,16 @@ export default function Match({ match }) {
             match={match}
           />
           <Items 
-            match={match}
+            match={true}
             player={match.info.participants[summonerIndex]}
-            size={'27px'}
+            size={'[27px]'}
           />
           <PlayerLinks 
             match={match}
           />
         </div>
-        <button onClick={() => {setExpanded(!expanded)}} style={{ width: '40px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end', paddingBottom: '8px' }} className={remake ? 'bg-[#9090a280] dark:bg-[#9090a2]' : won ? 'bg-[#5382e880] dark:bg-[#5382e8]' : 'bg-[#E8405780] dark:bg-[#E84057]'}>
-          <MdExpandMore className={!expanded ? 'fill-white w-6 h-6 transition duration-75 rotate-0' : 'fill-white w-6 h-6 transition duration-75 rotate-180'} />
+        <button onClick={() => {setExpanded(!expanded)}} style={{ width: '40px', display: 'flex', justifyContent: 'center', alignItems: 'flex-end', paddingBottom: '8px' }} className={remake ? 'bg-[#9090a280] dark:bg-[#9090a2] expand-btn' : won ? 'bg-[#5382e880] dark:bg-[#5382e8] expand-btn' : 'bg-[#E8405780] dark:bg-[#E84057] expand-btn'}>
+          <MdExpandMore className={!expanded ? 'fill-white w-6 h-6 m400:w-[18px] m400:h-[18px] transition duration-75 rotate-0' : 'fill-white w-6 h-6 m400:w-[18px] m400:h-[18px] transition duration-75 rotate-180'} />
         </button>
       </div>
       {expanded && 

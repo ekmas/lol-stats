@@ -17,12 +17,13 @@ export default function MobileNav({ active, setIsMobileNavActive, theme, setThem
   
   let handleNavLinks = (url) => {
     setIsMobileNavActive(false)
+    document.body.style.overflowY = 'auto'
     navigate(url)
   }
 
   return (
     <nav style={active ? {top: '0'} : {top: '-100%'}} className='fixed flex justify-center items-center w-screen h-screen top-0 transition-[top] h550:pt-[70px] duration-500 z-10 bg-white-gray dark:bg-gray'>
-        <div className='w-full h-[200px] flex flex-col items-center justify-between text-2xl'>
+        <div className='w-full h-[200px] flex flex-col items-center justify-between text-2xl text-black dark:text-white'>
             <button onClick={() => {handleNavLinks('/')}}>Home</button>
             <button onClick={() => {handleNavLinks('/leaderboard')}}>Leaderboard</button>
             <button onClick={() => {handleNavLinks('/about')}}>About</button>
