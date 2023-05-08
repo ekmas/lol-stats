@@ -30,13 +30,13 @@ export default function MatchPlayer({ player, maxDamage, team }) {
                 </div>
             </div>
             <div className='grid grid-cols-[1fr_1fr] m450:w-[30px] m450:h-[30px] w-[36px] h-[36px] gap-[2px] text-transparent'>
-                <img className='w-[14px] h-[14px]' src={`http://ddragon.leagueoflegends.com/cdn/13.8.1/img/spell/${summonerSpell[`${player.summoner1Id === 100 ? 4 : player.summoner1Id}`]}`} alt="summoner" />
-                <div className="grid place-items-center w-[14px] h-[14px]">
-                    <img className='w-[14px] h-[14px]' src={`https://ddragon.leagueoflegends.com/cdn/img/perk-images/${runes[`${rune1}`]}`} alt="rune" />
+                <img className='w-[17px] h-[17px] m450:w-[14px] m450:h-[14px]' src={`http://ddragon.leagueoflegends.com/cdn/13.8.1/img/spell/${summonerSpell[`${player.summoner1Id === 100 ? 4 : player.summoner1Id}`]}`} alt="summoner" />
+                <div className="grid place-items-center w-[17px] h-[17px] m450:w-[14px] m450:h-[14px]">
+                    <img className='w-[17px] h-[17px] m450:w-[14px] m450:h-[14px]' src={`https://ddragon.leagueoflegends.com/cdn/img/perk-images/${runes[`${rune1}`]}`} alt="rune" />
                 </div>
-                <img className='w-[14px] h-[14px]' src={`http://ddragon.leagueoflegends.com/cdn/13.8.1/img/spell/${summonerSpell[`${player.summoner2Id === 100 ? 14 : player.summoner2Id}`]}`} alt="summoner" />
-                <div className="champion-perk-placeholder w-[14px] h-[14px]">
-                    <img className='w-[14px] h-[14px]' src={`https://ddragon.leagueoflegends.com/cdn/img/perk-images/${runes[`${rune2}`]}`} alt="rune" />
+                <img className='w-[17px] h-[17px] m450:w-[14px] m450:h-[14px]' src={`http://ddragon.leagueoflegends.com/cdn/13.8.1/img/spell/${summonerSpell[`${player.summoner2Id === 100 ? 14 : player.summoner2Id}`]}`} alt="summoner" />
+                <div className="champion-perk-placeholder w-[17px] h-[17px] m450:w-[14px] m450:h-[14px]">
+                    <img className='w-[17px] h-[17px] m450:w-[14px] m450:h-[14px]' src={`https://ddragon.leagueoflegends.com/cdn/img/perk-images/${runes[`${rune2}`]}`} alt="rune" />
                 </div>
             </div>
         </div>
