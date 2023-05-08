@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import Summoner from "./pages/Summoner";
 import Leaderboard from "./pages/Leaderboard";
 import About from "./pages/About";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -31,14 +32,16 @@ function App() {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/summoner/:region/:username" element={<Summoner />}/>
-        <Route path="/leaderboard" element={<Leaderboard />}/>
-        <Route path="/about" element={<About />}/>
-      </Routes>
-    </ThemeContext.Provider>
+    <HelmetProvider>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/summoner/:region/:username" element={<Summoner />}/>
+          <Route path="/leaderboard" element={<Leaderboard />}/>
+          <Route path="/about" element={<About />}/>
+        </Routes>
+      </ThemeContext.Provider>
+    </HelmetProvider>
   )
 }
 

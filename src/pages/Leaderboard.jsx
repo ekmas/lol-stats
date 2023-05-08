@@ -5,6 +5,7 @@ import { MdExpandMore } from 'react-icons/md'
 import useLeaderboardStore from '../stores/leaderboardStore'
 import LeaderboardTable from '../components/LeaderboardTable'
 import LoadingLeaderboardTable from '../components/LoadingLeaderboardTable'
+import { Helmet } from 'react-helmet-async'
 
 export default function Leaderboard() {
 
@@ -32,6 +33,10 @@ export default function Leaderboard() {
 
   return (
     <>
+        <Helmet>
+          <title>LoL Stats - Leaderboard</title>
+        </Helmet>
+
         <Header />
         <div className='flex flex-col items-center pt-[200px] m480:pt-[150px] px-7 m350:px-4 text-center text-black dark:text-white'>
           <h2 className='font-bold text-3xl m480:text-2xl'>Leaderboard</h2>
