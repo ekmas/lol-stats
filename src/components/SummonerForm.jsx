@@ -40,7 +40,7 @@ export default function SummonerForm() {
         </div>
 
         <button onClick={() => setIsModalActive(true)} className='bg-white flex items-center dark:bg-black py-[14px] px-5 m500:px-3 m400:text-sm m400:py-[12px] m350:text-[13px] rounded-e-2xl'>
-          Region
+          {region === null ? 'Region' : region.toUpperCase()}
           <MdExpandMore className='ml-3 w-6 h-6'/>
         </button>
       </div>
